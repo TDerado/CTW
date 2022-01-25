@@ -58,7 +58,10 @@ def prob7(nums):
     return shortList
 
 def prob8(name):
-    os.mkdir(name)
+    try:
+        os.mkdir(name)
+    except:
+        print("name directory already made")
 
 print(prob1("WoOord"))
 print(prob2(3, 4))
@@ -67,4 +70,4 @@ print(prob4([["00", "01", "02"],["we", "tok", "knh"],["test", "test2", "test3"]]
 print(prob5())
 print(prob6(4,0))
 print(prob7([6,7,3,2,4,4,1,2,7,6,4,5,9,0,3,4,66]))
-print(prob8("hw3-folder"))
+prob8("hw3-folder")
